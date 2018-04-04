@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      "kityminder-core@1.4.48",
+      "C:\\Users\\Administrator\\Desktop\\kityminder-editor"
+    ]
+  ],
+  "_from": "kityminder-core@1.4.48",
+  "_id": "kityminder-core@1.4.48",
+  "_inBundle": false,
+  "_integrity": "sha512-ZkLdblS5sxwA6oznM9a4Y4FRouHp6MuyUdIsJQyDaadBgM9pclLcqbe+pp7fk7DJ3gtq3tdjQ5Vh7IKridp9/g==",
+  "_location": "/kityminder-core",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "kityminder-core@1.4.48",
+    "name": "kityminder-core",
+    "escapedName": "kityminder-core",
+    "rawSpec": "1.4.48",
+    "saveSpec": null,
+    "fetchSpec": "1.4.48"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/kityminder-core/-/kityminder-core-1.4.48.tgz",
+  "_spec": "1.4.48",
+  "_where": "C:\\Users\\Administrator\\Desktop\\kityminder-editor",
+  "author": {
+    "name": "Baidu FEX",
+    "url": "http://fex.baidu.com"
+  },
+  "bugs": {
+    "url": "https://github.com/fex-team/kityminder-core/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "description": "KityMinder Core Implement",
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.5",
+    "grunt": "~0.4.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-copy": "~0.8.2",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-module-dependence": "~0.2.1",
+    "grunt-replace": "~0.8.0",
+    "uglify-js": "^2.8.29"
+  },
+  "homepage": "https://github.com/fex-team/kityminder-core",
+  "keywords": [
+    "kityminder",
+    "kity",
+    "minder",
+    "svg",
+    "graphic",
+    "javascript"
+  ],
+  "license": "BSD-3-Clause",
+  "licenses": [
+    {
+      "type": "BSD-3-Clause",
+      "url": "https://github.com/fex-team/kityminder-core/blob/dev/LICENSE"
+    }
+  ],
+  "main": "dist/kityminder.core.js",
+  "name": "kityminder-core",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fex-team/kityminder-core.git"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "dev": "grunt dev"
+  },
+  "title": "Kity Minder Core",
+  "version": "1.4.48"
+}
