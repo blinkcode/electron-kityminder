@@ -12,6 +12,6 @@
 ```sh
 git clone https://github.com/popingblink/electron-kityminder.git
 cd electron-kityminder
-npm install
+npm init
 npm start
 ```
