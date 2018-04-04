@@ -8,7 +8,9 @@
 2.可完成图片的导出，导入功能没有实现。可以直接借鉴百度脑图的思路。
 
 ## 使用
+```sh
 git clone https://github.com/popingblink/electron-kityminder.git
 cd electron-kityminder
 npm install
 npm start
+```
