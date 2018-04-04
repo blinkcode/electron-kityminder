@@ -4,8 +4,8 @@
   "description": "electron和kityminder的试验品哟",
   "main": "main.js",
   "scripts": {
-    "init":"npm install -g electron && npm i -g bower && bower install",
-    "start": "electron . --debug"
+    "init":"npm install -g electron && npm i -g bower && bower install  && npm install",
+    "start": "electron ."
   },
   "repository": "https://github.com/popingblink/electron-kityminder",
   "keywords": [
