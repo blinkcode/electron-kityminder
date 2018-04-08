@@ -1,25 +1,28 @@
 const electron = require('electron')
-// Module to control application life.
+// app对象
 const app = electron.app
-// Module to create native browser window.
+// 定义窗口
 const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
+
+// 定义一个全局window对象，不然窗口会被关闭（js Garbage Collection）
 let mainWindow;
-// const debug = (process.argv.indexOf("--debug")>=0) // the flag about debug
+// 默认打开debug页面的flag；
+// const debug = (process.argv.indexOf("--debug")>=0) 
+// 创建窗口
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
+  // 默认打开开发者工具
   // if (debug) {
   //   mainWindow.webContents.openDevTools()
   //   mainWindow.maximize()
   //   //require('devtron').install()
   // } //openDevTool
-  // and load the index.html of the app.
+  // 确定路径加载index.html
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
@@ -38,12 +41,10 @@ function createWindow () {
   })
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
+// electron准备好后创建窗口
 app.on('ready', createWindow)
 
-// Quit when all windows are closed.
+// 退出时关闭
 app.on('window-all-closed', function () {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
@@ -60,5 +61,3 @@ app.on('activate', function () {
   }
 })
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
