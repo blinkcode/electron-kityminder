@@ -1,20 +1,85 @@
 const electron = require('electron')
+const Menu =electron.Menu;// 获取菜单对象
 // app对象
 const app = electron.app
 // 定义窗口
 const BrowserWindow = electron.BrowserWindow
-
+const {export_file, open_file, save_as, save_file} = require('./operation');
 const path = require('path')
 const url = require('url')
 
+const menuTemplate = [
+  {
+    label:"文件",
+    submenu:[
+      
+      {
+        label: '打开',
+        accelerator: 'CommandOrControl+O',
+        click: open_file
+      },
+      {
+        label: '保存',
+        accelerator: "CommandOrControl+S",
+        click: save_file
+      },
+      {
+        label: '另存为',
+        accelerator: "CommandOrControl+Shift+S",
+        click: save_as
+      },
+      {
+        type: 'separator'
+      },
+      {
+        label: 'Export',
+        submenu: [
+          {
+            label: 'JSON',
+            click: export_file
+          },
+          {
+            label: 'Plain Text',
+            click: export_file
+          },
+          {
+            label: 'Markdown',
+            click: export_file
+          },
+          {
+            label: 'SVG',
+            click: export_file
+          },
+          {
+            label: 'PNG',
+            click: export_file
+          }
+        ]
+      },
+      {
+        type: 'separator'
+      },
+      {
+        label: 'Toggle DevTools',
+        accelerator: 'F12',
+        click: function() { BrowserWindow.getFocusedWindow().toggleDevTools(); }
+      },
+    ],
+   
+  }
+  
+]
 
 // 定义一个全局window对象，不然窗口会被关闭（js Garbage Collection）
 let mainWindow;
 // 默认打开debug页面的flag；
 // const debug = (process.argv.indexOf("--debug")>=0) 
 // 创建窗口
+// console.log(Menu);
+var menu = Menu.buildFromTemplate(menuTemplate);
 function createWindow () {
   // Create the browser window.
+  Menu.setApplicationMenu(menu);
   mainWindow = new BrowserWindow({width: 800, height: 600})
   // 默认打开开发者工具
   // if (debug) {
