@@ -23,7 +23,7 @@ holder.ondrop = function (e) {
   })(file);
 
   reader.readAsText(file);
-  return false;
+  return false; 
 };
 
 // 打开文件
