@@ -15,7 +15,7 @@ holder.ondrop = function (e) {
   // filename = file.path;
   filename.setFilename(file.path);
   
-  var reader = new FileReader();
+  var reader = new FileReader(); 
   reader.onload = (function (file) {
     return function (e) {
       editor.minder.importJson(JSON.parse(this.result));
