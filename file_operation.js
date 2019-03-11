@@ -13,7 +13,7 @@ holder.ondrop = function (e) {
   var file = e.dataTransfer.files[0];
 
   // filename = file.path;
-  filename.setFilename(file.path);
+  filename.setFilename(file.path);  
   
   var reader = new FileReader(); 
   reader.onload = (function (file) {
